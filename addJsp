@@ -1,0 +1,73 @@
+<%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
+<%
+String path = request.getContextPath();
+String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
+%>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html >
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<title>演示</title>
+<% 
+response.setContentType("text/html;charset=UTF-8");
+request.setCharacterEncoding("UTF-8");
+%>
+<link rel="stylesheet" type="text/css" href="jqtransform.css" />
+<link rel="stylesheet" type="text/css" href="addEmp.css" />
+<style type="text/css">
+	.demo{width:680px; margin:10px auto; color:#333; background:#fff}
+	.page_title{width:680px; height:30px; margin:10px auto 0 auto; text-align:center; font-weight:bold;}
+	form p{padding:4px; line-height:20px; clear:both}
+	form p label{display:block; float:left; width:100px; padding-top:2px}
+</style>
+<script type="text/javascript" src="jquery-1.7.2.js"></script>
+<script type="text/javascript" src="jquery.jqtransform.js"></script>
+<script type="text/javascript" src="My97DatePicker/WdatePicker.js"></script>
+<script language="javascript">
+$(function(){
+	$('.jqtransform').jqTransform();
+});
+</script>
+</head>
+
+<body style="background:url('/wuyepro/images_tab/page2.jpg');">
+	
+	<div id="main">
+	
+	
+	<div id="divBody" class="demo">
+	<form class="jqtransform" action="#" method="post">
+		<table id="tableForm" >
+			<tr>
+				<td class="tdHead"><div id="divTitle" ><span id="spanTitle"></span></div></td>
+				<td class="tdHead"><div id="divTitle" ><span id="spanTitle"></span></div></td>
+			</tr>
+			<tr>
+				<td class="tdText">部门号：</td>
+				<td class="tdInput"><input class="inputClass" type="text" name="addname" id="addname"/></td>
+			</tr>
+			<tr>
+				<td class="tdText">部门名称：</td>
+				<td class="tdInput"><input class="inputClass"  type="text" name="addage" id="addage"/></td>
+			</tr>
+			<tr>
+				<td class="tdText">部门地址：</td>
+				<td class="tdInput"><input class="inputClass"  type="text" name="addidcard" id="addidcard"/></td>
+		
+			<tr>
+				<td class="addButton" ><input type="submit" value="添加" /></td>
+				<td><input type="reset" value="重置" /></td>
+			</tr>
+	    </table>
+	</form>
+	</div>
+	
+	</div>
+	<div id="footer" align="center">
+	    <p >版权所有翻录必究@枫野国际</p>
+	</div>
+
+</body>
+</html>
